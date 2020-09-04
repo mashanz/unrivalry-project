@@ -13,6 +13,8 @@ urlpatterns = [
     path("adm/", include("unrivalryAdmin.urls")),
     path("api", include("unrivalryApi.urls")),
     path("api/", include("unrivalryApi.urls")),
+    path("portfolio", include("portfolio.urls")),
+    path("portfolio/", include("portfolio.urls")),
 
     # Core App URL
     # path('admin', admin.site.urls),            # Django admin route

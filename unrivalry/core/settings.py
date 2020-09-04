@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'app',  # Enable the inner app
     'unrivalryWeb',
     'unrivalryAdmin',
-    'unrivalryApi'
+    'unrivalryApi',
+    'portfolio',
 ]
 
 MIDDLEWARE = [

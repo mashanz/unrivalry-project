@@ -7,7 +7,6 @@ from django import template
 from django.utils.safestring import mark_safe
 
 
-class AdminViews():
-    @login_required(login_url="/login/")
+class PortfolioViews():
     def index(request):
-        return render(request, "adm/index.html")
+        return HttpResponse("Portfolio Index")
