@@ -7,8 +7,14 @@ from django.contrib import admin
 from django.urls import path, include  # add this
 
 urlpatterns = [
-    path('admin/', admin.site.urls),          # Django admin route
-    path('admin' , admin.site.urls),          # Django admin route 
-    path("", include("authentication.urls")), # Auth routes - login / register
-    path("", include("app.urls"))             # UI Kits Html files
+    # Custom App URL
+    path("", include("unrivalryWeb.urls")),
+    path("adm/", include("unrivalryAdmin.urls")),
+    path("api/", include("unrivalryApi.urls")),
+
+    # Core App URL
+    path('admin', admin.site.urls),            # Django admin route
+    path('admin/', admin.site.urls),           # Django admin route
+    path("", include("authentication.urls")),  # Auth routes - login / register
+    path("", include("app.urls")),             # UI Kits Html files
 ]
