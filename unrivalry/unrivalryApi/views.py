@@ -10,4 +10,5 @@ import datetime
 
 class ApiViews():
     def index(request):
-        return HttpResponse("Api Index")
+        # return HttpResponse("Api Index")
+        return render(request, "api/index.html")

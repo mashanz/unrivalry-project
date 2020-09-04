@@ -10,7 +10,8 @@ import datetime
 
 class WebViews():
     def index(request):
-        return HttpResponse("Web Index")
+        # return HttpResponse("Web Index")
+        return render(request, "web/index.html")
 
     def test(request):
         print("OH")

@@ -57,7 +57,12 @@ TEMPLATE_DIR = os.path.join(
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR],
+        'DIRS': [
+            TEMPLATE_DIR,
+            os.path.join(BASE_DIR, "unrivalryWeb/templates"),
+            os.path.join(BASE_DIR, "unrivalryAdmin/templates"),
+            os.path.join(BASE_DIR, "unrivalryApi/templates"),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
