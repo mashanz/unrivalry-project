@@ -15,7 +15,6 @@ def index(request):
     return render(request, "index.html")
 
 
-@login_required(login_url="/login/")
 def pages(request):
     context = {}
     # All resource paths end in .html.
