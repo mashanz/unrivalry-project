@@ -1,4 +1,4 @@
-[submodule "adminlte"]
-	path = adminlte
-	url = https://github.com/app-generator/django-dashboard-adminlte.git/
+[submodule "django-dashboard-adminlte"]
+	path = django-dashboard-adminlte
+	url = https://github.com/app-generator/django-dashboard-adminlte.git
 	branch = master
