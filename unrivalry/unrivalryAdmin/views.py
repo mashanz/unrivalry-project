@@ -11,5 +11,4 @@ import datetime
 class AdminViews():
     @login_required(login_url="/login/")
     def index(request):
-        # return HttpResponse("Admin Index")
         return render(request, "adm/index.html")

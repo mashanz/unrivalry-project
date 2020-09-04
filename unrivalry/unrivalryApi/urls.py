@@ -4,4 +4,5 @@ from .views import ApiViews
 
 urlpatterns = [
     path('', ApiViews.index),
+    path('test', ApiViews.test),
 ]

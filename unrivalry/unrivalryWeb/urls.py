@@ -5,5 +5,4 @@ from .views import WebViews
 
 urlpatterns = [
     path('', WebViews.index),
-    path('web_test', WebViews.test, name="web_test")
 ]
