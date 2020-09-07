@@ -9,4 +9,4 @@ from django.utils.safestring import mark_safe
 
 class PortfolioViews():
     def index(request):
-        return HttpResponse("Portfolio Index")
+        return render(request, "portfolio/index.html", {})

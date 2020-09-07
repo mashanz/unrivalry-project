@@ -4,7 +4,7 @@ from . import views as web
 from .views import WebViews
 
 urlpatterns = [
-    path('', WebViews.index),
+    path('', WebViews.index, name="home"),
     # Matches any html file
     re_path(r'^.*\.*', WebViews.pages),
 ]
