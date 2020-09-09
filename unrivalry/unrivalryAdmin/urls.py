@@ -4,4 +4,5 @@ from .views import AdminViews
 
 urlpatterns = [
     path('', AdminViews.index),
+    path('video', AdminViews.video),
 ]

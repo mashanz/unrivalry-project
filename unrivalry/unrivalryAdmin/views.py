@@ -10,4 +10,21 @@ from django.utils.safestring import mark_safe
 class AdminViews():
     @login_required(login_url="/login/")
     def index(request):
-        return render(request, "adm/index.html")
+        main_content = "adm/video.html"
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": 'adm/blank.html',
+            }
+        )
+
+    def video(request):
+        main_content = "adm/video.html"
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": main_content,
+            }
+        )
