@@ -76,9 +76,9 @@ class Profiling:
         # from the top command, the read written result will be as follows
         # 'Disks: XXXXXX/xxG read, XXXX/xxG written.'
         # we thus need to extract the read and written from this.
-        read_written = top_command[9].split(':')[1].split(',')
-        read = read_written[0].split(' ')[1]
-        written = read_written[1].split(' ')[1]
+        # read_written = top_command[9].split(':')[1].split(',')
+        # read = read_written[0].split(' ')[1]
+        # written = read_written[1].split(' ')[1]
 
         total_disk_space = round(total / 1024 ** 3, 1)
         free_disk_space = round(free / 1024 ** 3, 1)
