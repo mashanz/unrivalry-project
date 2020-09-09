@@ -19,33 +19,42 @@
     <section class="content">
 
         <div class="row justify-content-md-center">
-                <div class="col-12 col-md-3 text-center">
-                    <div class="card">
-                        <div class="card-body">
+                <div class="col-12 col-md-3">
+                    <div class="card text-center">
+                        <div class="card-header bg-dark ">
+                            <h3 class="card-title"><strong>CPU</strong></h3>
+                        </div>
+                        <div class="card-body bg-dark">
                             <input type="text" class="knob" value="{{profiling.cpu_load}}" data-skin="tron" data-thickness="0.2"
                                 data-angleArc="250" data-angleOffset="-125" data-width="120" data-height="120" data-readOnly="true"
-                                data-fgColor="blue">
-                            <div class="knob-label"><strong>CPU</strong> {{profiling.physical_and_logical_cpu_count}} Core</div>
+                                data-fgColor="white">
+                            <div class="knob-label">{{profiling.physical_and_logical_cpu_count}} Core</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 text-center">
-                    <div class="card">
-                        <div class="card-body">
+                <div class="col-12 col-md-3">
+                    <div class="card text-center">
+                        <div class="card-header bg-dark">
+                            <h3 class="card-title"><strong>RAM</strong></h3>
+                        </div>
+                        <div class="card-body bg-dark">
                             <input type="text" class="knob" value="{{profiling.ram.precentage}}" data-skin="tron" data-thickness="0.2"
                                 data-angleArc="250" data-angleOffset="-125" data-width="120" data-height="120" data-readOnly="true"
-                                data-fgColor="green">
-                            <div class="knob-label"><strong>RAM</strong> {{profiling.ram.used_ram}}/{{profiling.ram.total_ram}} GB</div>
+                                data-fgColor="white">
+                            <div class="knob-label">{{profiling.ram.used_ram}}/{{profiling.ram.total_ram}} GB</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-3 text-center">
-                    <div class="card">
-                        <div class="card-body">
+                <div class="col-12 col-md-3">
+                    <div class="card text-center">
+                        <div class="card-header bg-dark">
+                            <h3 class="card-title"><strong>DISK</strong></h3>
+                        </div>
+                        <div class="card-body bg-dark">
                             <input type="text" class="knob" value="{{profiling.disk.precentage}}" data-skin="tron" data-thickness="0.2"
                                 data-angleArc="250" data-angleOffset="-125" data-width="120" data-height="120" data-readOnly="true"
-                                data-fgColor="red">
-                            <div class="knob-label"><strong>DISK</strong> {{profiling.disk.used_disk_space}}/{{profiling.disk.total_disk_space}} GB</div>
+                                data-fgColor="white">
+                            <div class="knob-label">{{profiling.disk.used_disk_space}}/{{profiling.disk.total_disk_space}} GB</div>
                         </div>
                     </div>
                 </div>
