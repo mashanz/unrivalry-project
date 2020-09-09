@@ -91,10 +91,10 @@ class Profiling:
                 'used_disk_space': used_space,
                 'free_disk_space': free_disk_space,
                 'precentage': precentage,
-                'read_write': {
-                    'read': read,
-                    'written': written
-                }
+                # 'read_write': {
+                #     'read': read,
+                #     'written': written
+                # }
             }
         )
         return statistics
