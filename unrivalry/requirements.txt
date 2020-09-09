@@ -9,4 +9,3 @@ dj-database-url
 python-decouple
 gunicorn
 whitenoise
-pysqlite3==3.8.3
