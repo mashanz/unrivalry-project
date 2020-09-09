@@ -67,10 +67,13 @@ class Profiling:
 
     def _ram2():
         statistics = {}
+        total_ram = round(psutil.virtual_memory().total / 1024 ** 3, 1)
+        used_ram = round(psutil.virtual_memory().free / 1024 ** 3, 1)
+        used_ram = total_ram - used_ram
         statistics['ram'] = dict({
-            'total_ram': round(psutil.virtual_memory().total / 1024 ** 3, 1),
-            'used_ram': round(psutil.virtual_memory().available / 1024 ** 3, 1),
-            'precentage': psutil.virtual_memory().percent
+            'total_ram': total_ram,
+            'used_ram': used_ram,
+            'precentage': round(used_ram / total_ram * 100, 1)
         })
         return statistics
 
