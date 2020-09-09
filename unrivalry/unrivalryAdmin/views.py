@@ -146,12 +146,16 @@ class AdminViews:
     def dashboard(request):
         main_content = "adm/dashboard.html"
         statistics = dict()
-        try:
-            _thread.start_new_thread(statistics.update, (Profiling._cpu(),))
-            _thread.start_new_thread(statistics.update, (Profiling._ram(),))
-            _thread.start_new_thread(statistics.update, (Profiling._disk(),))
-        except:
-            print("Error: unable to start thread")
+        # try:
+        #     _thread.start_new_thread(statistics.update, (Profiling._cpu(),))
+        #     _thread.start_new_thread(statistics.update, (Profiling._ram(),))
+        #     _thread.start_new_thread(statistics.update, (Profiling._disk(),))
+        # except:
+        #     print("Error: unable to start thread")
+
+        statistics.update(Profiling._cpu())
+        statistics.update(Profiling._ram())
+        statistics.update(Profiling._disk())
 
         return render(
             request,
