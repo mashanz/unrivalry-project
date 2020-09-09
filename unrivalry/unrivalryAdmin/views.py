@@ -32,6 +32,7 @@ class Profiling:
         """
         cpu_load = [x / os.cpu_count() * 100 for x in os.getloadavg()][-1]
         statistics['cpu_load'] = round(cpu_load)
+        statistics['cpu_freq'] = psutil.cpu_freq()
         return statistics
 
     def _ram():
