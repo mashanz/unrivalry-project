@@ -96,7 +96,8 @@ class Profiling:
 
         total_disk_space = round(total / 1024 ** 3, 1)
         free_disk_space = round(free / 1024 ** 3, 1)
-        used_space = round(total / 1024 ** 3, 1) - round(free / 1024 ** 3, 1)
+        used_space = round(round(total / 1024 ** 3, 1) -
+                           round(free / 1024 ** 3, 1), 1)
         precentage = round(used_space / total_disk_space * 100, 1)
         statistics['disk'] = dict(
             {
