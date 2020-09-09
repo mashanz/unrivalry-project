@@ -154,7 +154,7 @@ class AdminViews:
         #     print("Error: unable to start thread")
 
         statistics.update(Profiling._cpu())
-        statistics.update(Profiling._ram())
+        # statistics.update(Profiling._ram())
         statistics.update(Profiling._disk())
 
         return render(
