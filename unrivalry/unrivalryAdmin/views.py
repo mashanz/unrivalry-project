@@ -10,6 +10,7 @@ import subprocess
 import re
 import shutil
 import _thread
+import psutil
 
 
 class Profiling:
@@ -61,6 +62,15 @@ class Profiling:
             'total_ram': ram_total,
             'used_ram': ram_used,
             'precentage': round(ram_used / ram_total * 100, 1)
+        })
+        return statistics
+
+    def _ram2():
+        statistics = {}
+        statistics['ram'] = dict({
+            'total_ram': round(psutil.virtual_memory().total / 1024 ** 3, 1),
+            'used_ram': round(psutil.virtual_memory().available / 1024 ** 3, 1),
+            'precentage': psutil.virtual_memory().percent
         })
         return statistics
 
@@ -155,6 +165,7 @@ class AdminViews:
 
         statistics.update(Profiling._cpu())
         # statistics.update(Profiling._ram())
+        statistics.update(Profiling._ram2())
         statistics.update(Profiling._disk())
 
         return render(
