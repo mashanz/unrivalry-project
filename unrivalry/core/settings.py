@@ -151,7 +151,7 @@ STATIC_URL = '/static/'
 if str(socket.gethostname()) == 'localhost.local':
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 else:
-    MEDIA_ROOT = os.path.join(BASE_DIR, '..', '..', '..', 'www', 'media')
+    MEDIA_ROOT = os.path.join(BASE_DIR, '~', 'www', 'media')
 MEDIA_URL = '/media/'
 
 # Extra places for collectstatic to find static files.
