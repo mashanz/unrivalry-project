@@ -11,9 +11,6 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="" class="nav-link">Experiment</a>
-      </li>
-      <li class="nav-item">
         <a href="#" class="nav-link">FAQ</a>
       </li>
       {% if user.is_authenticated %}
@@ -22,9 +19,6 @@
           Welcome, <strong>{{ request.user.username }}</strong>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="/" class="dropdown-item">
-            Websites
-          </a>
           <a href="/dashboard" class="dropdown-item">
             Dashboard
           </a>

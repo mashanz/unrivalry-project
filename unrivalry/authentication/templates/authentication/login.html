@@ -32,58 +32,14 @@
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body">
-
-            <p class="login-box-msg">
-            {% if msg %}
-                {{ msg | safe }}
-            {% endif %}
-        </p>
-
-        <form method="post" action="">
-          {% csrf_token %}
-          <div class="input-group mb-3">
-            {{ form.username }}
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            {{ form.password }}
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-8">
-              <div class="icheck-primary">
-                <input type="checkbox" id="remember">
-                <label for="remember">
-                  Remember Me
-                </label>
-              </div>
-            </div>
-            <!-- /.col -->
-            <div class="col-4">
-              <button type="submit" name="login" class="btn btn-primary btn-block">Sign In</button>
-            </div>
-            <br/>
-            <br/>
-            <a href="{% provider_login_url 'google' %}" class="btn btn-block btn-danger" style="margin-left:8px;margin-right:8px;">
-              <i class="fab fa-google-plus mr-2"></i> Login with Google
-            </a>
-            <!-- /.col -->
-          </div>
-        </form>
+        <br/>
+        <a href="{% provider_login_url 'google' %}" class="btn btn-block btn-danger">
+          <i class="fab fa-google-plus mr-2"></i> Login with Google
+        </a>
         <br/>
         <div class="text-center">
-            Not a member? <a href="{% url 'register' %}" class="text-center">Register</a><br/>
             Copyright &copy; {% now "Y" %} - <strong>Unrivalry</strong>
         </div>
-
       </div>
       <!-- /.login-card-body -->
     </div>
