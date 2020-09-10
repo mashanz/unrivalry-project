@@ -1,6 +1,7 @@
 asgiref
 autopep8
 django==2.1.10
+django-allauth
 pycodestyle
 pytz
 sqlparse

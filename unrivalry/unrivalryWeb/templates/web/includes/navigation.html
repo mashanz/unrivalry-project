@@ -1,3 +1,4 @@
+  {% load socialaccount %}
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -16,7 +17,13 @@
         <a href="#" class="nav-link">FAQ</a>
       </li>
       <li class="nav-item">
-        <a href="/adm" class="nav-link">Login</a>
+        {% if user.is_authenticated %}
+          <a href="/adm" class="nav-link">Welcome, <strong>{{ user.username }}</strong></a>
+        {% else %}
+          <a href="{% provider_login_url 'google' %}" class="btn btn-block btn-danger">
+            <i class="fab fa-google-plus mr-2"></i> Login with Google
+          </a>
+        {% endif %}
       </li>
     </ul>
   </nav>
