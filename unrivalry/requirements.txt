@@ -11,3 +11,4 @@ python-decouple
 gunicorn
 whitenoise
 psutil
+pillow
