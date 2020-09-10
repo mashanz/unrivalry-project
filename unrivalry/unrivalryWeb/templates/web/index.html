@@ -29,13 +29,7 @@
       <div class="card w-100">
         <div class="card-body">
           <center>
-            <a 
-            {% if user.is_authenticated %}
-            href="/dashboard" 
-            {% else %}
-            href="/login/" 
-            {% endif %}
-            type="button" class="btn btn-primary">Publish Music Now</a>
+            <a href="/dashboard" type="button" class="btn btn-primary">Publish Music Now</a>
           </center>
         </div>
       </div>

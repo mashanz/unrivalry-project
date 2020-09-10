@@ -11,12 +11,13 @@ import socket
 
 SECURE_SSL_REDIRECT = False
 
+# Force SSL if published
 if str(socket.gethostname()) == 'localhost.local':
     SECURE_SSL_REDIRECT = False
 else:
     SECURE_SSL_REDIRECT = True
 
-    # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = Path(__file__).parent
 
