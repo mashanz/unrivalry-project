@@ -27,4 +27,4 @@ staticfiles/*
 .vscode/symbols.json
 
 # migration
-# */migrations/*
+*/migrations/*
