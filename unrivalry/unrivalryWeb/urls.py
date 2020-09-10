@@ -6,5 +6,5 @@ from .views import WebViews
 urlpatterns = [
     path('', WebViews.index, name="home"),
     # Matches any html file
-    re_path(r'^.*\.*', WebViews.pages),
+    # re_path(r'^.*\.*', WebViews.pages),
 ]
