@@ -17,7 +17,11 @@
 
     {% include 'adm/includes/navigation.html' %}
 
-    {% include 'adm/includes/sidebar.html' %}
+    {% if user.is_superuser %}
+      {% include 'adm/includes/admin_sidebar.html' %}
+    {% else %}
+      {% include 'adm/includes/user_sidebar.html' %}
+    {% endif %}
 
     {% block content %}{% endblock content %}
 

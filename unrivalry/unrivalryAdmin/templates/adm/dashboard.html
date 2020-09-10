@@ -18,47 +18,66 @@
     <!-- Main content -->
     <section class="content">
 
-        <div class="row justify-content-md-center">
-                <div class="col-12 col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-dark ">
-                            <h3 class="card-title"><strong>CPU</strong></h3>
-                        </div>
-                        <div class="card-body bg-dark">
-                            <input type="text" class="knob" value="{{profiling.cpu_load}}" data-skin="tron" data-thickness="0.2"
-                                data-angleArc="250" data-angleOffset="-125" data-width="120" data-height="120" data-readOnly="true"
-                                data-fgColor="white">
-                            <div class="knob-label">{{profiling.physical_and_logical_cpu_count}} Core - {{profiling.cpu_freq}} Hz</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-dark">
-                            <h3 class="card-title"><strong>RAM</strong></h3>
-                        </div>
-                        <div class="card-body bg-dark">
-                            <input type="text" class="knob" value="{{profiling.ram.precentage}}" data-skin="tron" data-thickness="0.2"
-                                data-angleArc="250" data-angleOffset="-125" data-width="120" data-height="120" data-readOnly="true"
-                                data-fgColor="white">
-                            <div class="knob-label">{{profiling.ram.used_ram}}/{{profiling.ram.total_ram}} GB</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <div class="card text-center">
-                        <div class="card-header bg-dark">
-                            <h3 class="card-title"><strong>DISK</strong></h3>
-                        </div>
-                        <div class="card-body bg-dark">
-                            <input type="text" class="knob" value="{{profiling.disk.precentage}}" data-skin="tron" data-thickness="0.2"
-                                data-angleArc="250" data-angleOffset="-125" data-width="120" data-height="120" data-readOnly="true"
-                                data-fgColor="white">
-                            <div class="knob-label">{{profiling.disk.used_disk_space}}/{{profiling.disk.total_disk_space}} GB</div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Info boxes -->
+        <div class="row">
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-compact-disc"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Albums</span>
+                <span class="info-box-number">10</span>
+              </div>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-music"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Musics</span>
+                <span class="info-box-number">41,410</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <!-- fix for small devices only -->
+          {% comment %} <div class="clearfix hidden-md-up"></div> {% endcomment %}
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-eye"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Listen</span>
+                <span class="info-box-number">760</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Fans</span>
+                <span class="info-box-number">2,000</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+
+        </div>
+        <!-- /.row -->
 
     </section>
     <!-- /.content -->

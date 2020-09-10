@@ -2,7 +2,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link text-center">
-      <span class="brand-text font-weight-light">Unrivalry Publisher</span>
+      <span class="brand-text font-weight-light">Unrivalry Administrator</span>
     </a>
 
     <!-- Sidebar -->
@@ -35,18 +35,17 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/dashboard/video" class="nav-link {% if active == "video" %}active{% endif %}">
+            <a href="/dashboard/server_profiling" class="nav-link {% if active == "server_profiling" %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Video
-                <span class="right badge badge-danger">New</span>
+                Server Profiling
               </p>
             </a>
           </li>
           <li class="nav-header">MISCELLANEOUS</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
+            <a href="/dashboard/settings" class="nav-link {% if active == "settings" %}active{% endif %}">
+              <i class="nav-icon fas fa-sliders-h"></i>
               <p>Settings</p>
             </a>
           </li>

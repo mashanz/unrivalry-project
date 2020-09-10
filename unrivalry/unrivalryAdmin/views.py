@@ -164,6 +164,19 @@ class AdminViews:
     @login_required(login_url="/login/")
     def dashboard(request):
         main_content = "adm/dashboard.html"
+
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": main_content,
+                "active": 'dashboard',
+            }
+        )
+
+    @login_required(login_url="/login/")
+    def server_profiling(request):
+        main_content = "adm/server_profiling.html"
         statistics = dict()
         statistics.update(Profiling._cpu())
         statistics.update(Profiling._ram2())
@@ -175,6 +188,58 @@ class AdminViews:
             {
                 "main_content": main_content,
                 "profiling": statistics,
-                "active": 'dashboard',
+                "active": 'server_profiling',
+            }
+        )
+
+    @login_required(login_url="/login/")
+    def album(request):
+        main_content = "adm/album.html"
+
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": main_content,
+                "active": 'album',
+            }
+        )
+
+    @login_required(login_url="/login/")
+    def music(request):
+        main_content = "adm/music.html"
+
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": main_content,
+                "active": 'music',
+            }
+        )
+
+    @login_required(login_url="/login/")
+    def profile(request):
+        main_content = "adm/profile.html"
+
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": main_content,
+                "active": 'profile',
+            }
+        )
+
+    @login_required(login_url="/login/")
+    def settings(request):
+        main_content = "adm/settings.html"
+
+        return render(
+            request,
+            "adm/index.html",
+            {
+                "main_content": main_content,
+                "active": 'settings',
             }
         )
