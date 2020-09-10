@@ -145,6 +145,7 @@ class AdminViews:
             "adm/index.html",
             {
                 "main_content": 'adm/blank.html',
+                "active": 'video',
             }
         )
 
@@ -156,6 +157,7 @@ class AdminViews:
             "adm/index.html",
             {
                 "main_content": main_content,
+                "active": 'video',
             }
         )
 
@@ -172,6 +174,7 @@ class AdminViews:
             "adm/index.html",
             {
                 "main_content": main_content,
-                "profiling": statistics
+                "profiling": statistics,
+                "active": 'dashboard',
             }
         )

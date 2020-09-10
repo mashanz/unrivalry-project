@@ -7,10 +7,16 @@ import os
 from decouple import config
 from unipath import Path
 import dj_database_url
+import socket
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+if str(socket.gethostname()) == 'localhost.local':
+    SECURE_SSL_REDIRECT = False
+else:
+    SECURE_SSL_REDIRECT = True
+
+    # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = Path(__file__).parent
 
