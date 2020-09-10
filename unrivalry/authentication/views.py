@@ -27,7 +27,7 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("/adm/")
+                return redirect("/dashboard")
             else:
                 msg = 'Invalid credentials'
         else:
@@ -52,7 +52,7 @@ def register_user(request):
             msg = 'User created - please <a href="/login">login</a>.'
             success = True
 
-            return redirect("/")
+            return redirect("/dashboard")
 
         else:
             msg = 'Form is not valid'

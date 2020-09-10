@@ -3,7 +3,7 @@ from django.urls import path
 from .views import AdminViews
 
 urlpatterns = [
-    path('', AdminViews.index),
-    path('dashboard', AdminViews.dashboard),
+    # path('', AdminViews.index),
+    path('', AdminViews.dashboard),
     path('video', AdminViews.video),
 ]

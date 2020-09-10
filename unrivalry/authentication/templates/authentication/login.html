@@ -1,5 +1,5 @@
 {% extends "layouts/base-fullscreen.html" %}
-
+{% load socialaccount %}
 {% block title %} Login {% endblock %} 
 
 <!-- Element injected in the BODY element -->
@@ -24,8 +24,7 @@
   <div class="login-box">
 
     <div class="login-logo">
-        <a target="_blank" rel="noopener noreferrer" 
-           href="">
+        <a href="/">
            <img src="/static/assets/img/unrivalry.png" alt="Unrivalry Logo" class="brand-image" style="opacity: .8; height:100px;">
         </a>
     </div>
@@ -41,9 +40,7 @@
         </p>
 
         <form method="post" action="">
-
           {% csrf_token %}
-
           <div class="input-group mb-3">
             {{ form.username }}
             <div class="input-group-append">
@@ -73,15 +70,18 @@
             <div class="col-4">
               <button type="submit" name="login" class="btn btn-primary btn-block">Sign In</button>
             </div>
+            <br/>
+            <br/>
+            <a href="{% provider_login_url 'google' %}" class="btn btn-block btn-danger" style="margin-left:8px;margin-right:8px;">
+              <i class="fab fa-google-plus mr-2"></i> Login with Google
+            </a>
             <!-- /.col -->
           </div>
         </form>
-
-        <br /><br />
-
+        <br/>
         <div class="text-center">
-            {% comment %} Not a member? <a href="{% url 'register' %}" class="text-center">Register</a><br /><br /> {% endcomment %}
-            Copyright &copy; {% now "Y" %} - <a href="portfolio">Handhyatma</a>
+            Not a member? <a href="{% url 'register' %}" class="text-center">Register</a><br/>
+            Copyright &copy; {% now "Y" %} - <strong>Unrivalry</strong>
         </div>
 
       </div>

@@ -9,8 +9,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     # Custom App URL
-    path("adm", include("unrivalryAdmin.urls")),
-    path("adm/", include("unrivalryAdmin.urls")),
+    path("dashboard", include("unrivalryAdmin.urls")),
+    path("dashboard/", include("unrivalryAdmin.urls")),
     path("api", include("unrivalryApi.urls")),
     path("api/", include("unrivalryApi.urls")),
     path("portfolio", include("portfolio.urls")),
@@ -18,8 +18,8 @@ urlpatterns = [
 
     # Core App URL
     path('soclog/', TemplateView.as_view(template_name="soclog/index.html")),
-    path('admin', admin.site.urls),            # Django admin route
-    path('admin/', admin.site.urls),           # Django admin route
+    path('devadmin', admin.site.urls),            # Django admin route
+    path('devadmin/', admin.site.urls),           # Django admin route
     path('accounts/', include('allauth.urls')),
     path("", include("authentication.urls")),  # Auth routes - login / register
     path("", include("unrivalryWeb.urls")),

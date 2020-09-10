@@ -6,7 +6,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/dashboard">
           <img src="/static/assets/img/unrivalry.png" alt="Unrivalry Logo" class="brand-image" style="opacity: .8; height:32px; margin-top:-5px; margin-left:-15px;">
         </a>
       </li>
@@ -19,6 +19,18 @@
           Welcome, <strong>{{ request.user.username }}</strong>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          {% if user.is_superuser %}
+          <a href="/devadmin" class="dropdown-item">
+            <strong>Super Admin</strong>
+          </a>
+          <div class="dropdown-divider"></div>
+          {% endif %}
+          <a href="/" class="dropdown-item">
+            Websites
+          </a>
+          <a href="/dashboard" class="dropdown-item">
+            Dashboard
+          </a>
           <a href="#" class="dropdown-item">
             Profile
           </a>

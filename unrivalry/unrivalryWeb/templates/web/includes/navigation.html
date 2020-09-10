@@ -16,15 +16,28 @@
       <li class="nav-item">
         <a href="#" class="nav-link">FAQ</a>
       </li>
-      <li class="nav-item">
-        {% if user.is_authenticated %}
-          <a href="/adm" class="nav-link">Welcome, <strong>{{ user.username }}</strong></a>
-        {% else %}
-          <a href="{% provider_login_url 'google' %}" class="btn btn-block btn-danger">
-            <i class="fab fa-google-plus mr-2"></i> Login with Google
+      {% if user.is_authenticated %}
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          Welcome, <strong>{{ request.user.username }}</strong>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="/" class="dropdown-item">
+            Websites
           </a>
-        {% endif %}
+          <a href="/dashboard" class="dropdown-item">
+            Dashboard
+          </a>
+          <a href="#" class="dropdown-item">
+            Profile
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="{% url 'logout' %}" class="dropdown-item">
+            Logout
+          </a>
+        </div>
       </li>
+      {% endif %}
     </ul>
   </nav>
   <!-- /.navbar -->
