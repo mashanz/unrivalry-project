@@ -149,9 +149,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 if str(socket.gethostname()) == 'localhost.local':
+    # Develipment Purpose
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 else:
-    MEDIA_ROOT = os.path.join(BASE_DIR, '..', '..', 'public', 'media')
+    # Production Purpose in hosting
+    # Allow DIR depend on engine used to serve in production server
+    # This is location where www folder or public_html is located from this DIR
+    MEDIA_ROOT = os.path.join(BASE_DIR, '..', '..', '..', 'www', 'media')
 MEDIA_URL = '/media/'
 
 # Extra places for collectstatic to find static files.
