@@ -9,6 +9,8 @@ from unipath import Path
 import dj_database_url
 import socket
 
+APPEND_SLASH = True
+
 SECURE_SSL_REDIRECT = False
 
 # Force SSL if published
@@ -26,6 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False)
+DEBUG = True
 
 # load production server from .env
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',
