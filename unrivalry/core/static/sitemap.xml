@@ -12,5 +12,17 @@
     <changefreq>monthly</changefreq>
   </url>
 
+  <url>
+    <loc>https://unrivalry.com/dashboard</loc>
+    <priority>2</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <url>
+    <loc>https://unrivalry.com/login/</loc>
+    <priority>2</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
 </urlset>
 
