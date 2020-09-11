@@ -12,6 +12,16 @@
   {% block stylesheets %}{% endblock stylesheets %}
 
 </head>
+
+  <!-- jQuery -->
+  <script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="/static/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="/static/assets/js/adminlte.js"></script>
+
 <body class="hold-transition {% block body_class %}{% endblock body_class %}">
 <div class="wrapper">
 
@@ -23,7 +33,8 @@
       {% include 'adm/includes/user_sidebar.html' %}
     {% endif %}
 
-    {% block content %}{% endblock content %}
+    {% block content %}
+    {% endblock content %}
 
     {% include 'adm/includes/footer.html' %}
 
