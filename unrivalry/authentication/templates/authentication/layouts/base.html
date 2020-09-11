@@ -6,7 +6,7 @@
   <link rel="icon" href="/static/assets/img/unrivalry_favicon.png" type="image/x-icon">
 
   <title>
-    Unrivalry | {% block title %}{% endblock %}
+    Django AdminLTE - {% block title %}{% endblock %} | AppSeed
   </title> 
 
   {% block stylesheets %}{% endblock stylesheets %}
@@ -15,17 +15,13 @@
 <body class="hold-transition {% block body_class %}{% endblock body_class %}">
 <div class="wrapper">
 
-    {% include 'adm/includes/navigation.html' %}
+    {% include 'includes/navigation.html' %}
 
-    {% if user.is_superuser %}
-      {% include 'adm/includes/admin_sidebar.html' %}
-    {% else %}
-      {% include 'adm/includes/user_sidebar.html' %}
-    {% endif %}
+    {% include 'includes/sidebar.html' %}
 
     {% block content %}{% endblock content %}
 
-    {% include 'adm/includes/footer.html' %}
+    {% include 'includes/footer.html' %}
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

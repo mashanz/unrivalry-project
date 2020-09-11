@@ -19,6 +19,7 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     path("portfolio/", include("portfolio.urls")),
 
     # Core App URL
+    path('users/', include('django.contrib.auth.urls')),
     path('soclog/', TemplateView.as_view(template_name="soclog/index.html")),
     path('devadmin', admin.site.urls),            # Django admin route
     path('devadmin/', admin.site.urls),           # Django admin route
