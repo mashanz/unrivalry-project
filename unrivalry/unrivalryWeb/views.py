@@ -12,6 +12,9 @@ class WebViews():
     def index(request):
         return render(request, "web/index.html")
 
+    def google_seo(request):
+        return render(request, "web/google0e8c41b27141026f.html")
+
     def pages(request):
         context = {}
         # All resource paths end in .html.

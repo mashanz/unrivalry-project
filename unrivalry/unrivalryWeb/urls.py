@@ -5,6 +5,7 @@ from .views import WebViews
 
 urlpatterns = [
     path('', WebViews.index, name="home"),
+    path('google0e8c41b27141026f.html', WebViews.google_seo),
     # Matches any html file
     re_path(r'^.*\.*', WebViews.pages),
 ]
