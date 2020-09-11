@@ -23,15 +23,16 @@
 
   <div class="register-box">
 
-    <div class="login-logo">
-        <a target="_blank" rel="noopener noreferrer" 
-           href="">
-           <img src="/static/assets/img/unrivalry.png" alt="Unrivalry Logo" class="brand-image" style="opacity: .8; height:100px;">
-        </a>
-    </div>
-
     <div class="card">
       <div class="card-body register-card-body">
+
+        <div class="login-logo">
+          <a target="_blank" rel="noopener noreferrer" 
+            href="">
+            <img src="/static/assets/img/unrivalry.png" alt="Unrivalry Logo" class="brand-image" style="opacity: .8; height:100px;">
+          </a>
+        </div>
+        <hr/>
         <p class="login-box-msg">
             {% if msg %}
                 <span class="text-danger">{{ msg | safe }}</span>
@@ -106,9 +107,8 @@
         <br />
         <div class="text-center">
             Have an account? <a href="{% url 'login' %}" class="text-center">Login</a>
-            <br />
-            <br />
-            Copyright &copy; {% now "Y" %} - <a href="portfolio">Handhyatma</a>
+            <hr />
+            Copyright &copy; {% now "Y" %} - <strong>Unrivalry</strong>
         </div>
 
       </div>

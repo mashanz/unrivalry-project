@@ -23,20 +23,19 @@
 
   <div class="login-box">
 
-    <div class="login-logo">
-        <a href="/">
-           <img src="/static/assets/img/unrivalry.png" alt="Unrivalry Logo" class="brand-image" style="opacity: .8; height:100px;">
-        </a>
-    </div>
-
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body">
-        <br/>
+        <div class="login-logo">
+          <a href="/">
+            <img src="/static/assets/img/unrivalry.png" alt="Unrivalry Logo" class="brand-image" style="opacity: .8; height:100px;">
+          </a>
+        </div>
+        <hr/>
         <a href="{% provider_login_url 'google' %}" class="btn btn-block btn-danger">
           <i class="fab fa-google-plus mr-2"></i> Masuk menggunakan Google
         </a>
-        <br/>
+        <hr/>
         <div class="text-center">
             Copyright &copy; {% now "Y" %} - <strong>Unrivalry</strong>
         </div>
