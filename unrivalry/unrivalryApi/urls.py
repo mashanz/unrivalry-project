@@ -5,4 +5,5 @@ from .views import ApiViews
 urlpatterns = [
     path('', ApiViews.index),
     path('test', ApiViews.test),
+    path('test_model', ApiViews.test_model),
 ]

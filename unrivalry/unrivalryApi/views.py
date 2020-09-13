@@ -5,7 +5,10 @@ from django.template import loader
 from django.http import HttpResponse, JsonResponse
 from django import template
 from django.utils.safestring import mark_safe
+from django.core import serializers
+from django.http.response import JsonResponse
 import datetime
+from unrivalryWeb import models as modelWeb
 
 
 class ApiViews():
@@ -25,3 +28,8 @@ class ApiViews():
             }
         )
         return response
+
+    def test_model(request):
+        some_queryset = modelWeb.MusicGenre.objects.all()
+        serialized_queryset = serializers.serialize('python', some_queryset)
+        return JsonResponse(serialized_queryset, safe=False)
