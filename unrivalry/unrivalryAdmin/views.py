@@ -139,44 +139,37 @@ class AdminViews:
 
     @login_required(login_url="/login/")
     def index(request):
-        main_content = "adm/video.html"
         return render(
             request,
-            "adm/index.html",
+            "adm/blank.html",
             {
-                "main_content": 'adm/blank.html',
                 "active": 'video',
             }
         )
 
     @login_required(login_url="/login/")
     def video(request):
-        main_content = "adm/video.html"
         return render(
             request,
-            "adm/index.html",
+            "adm/video.html",
             {
-                "main_content": main_content,
                 "active": 'video',
             }
         )
 
     @login_required(login_url="/login/")
     def dashboard(request):
-        main_content = "adm/dashboard.html"
 
         return render(
             request,
-            "adm/index.html",
+            "adm/dashboard.html",
             {
-                "main_content": main_content,
                 "active": 'dashboard',
             }
         )
 
     @login_required(login_url="/login/")
     def server_profiling(request):
-        main_content = "adm/server_profiling.html"
         statistics = dict()
         statistics.update(Profiling._cpu())
         statistics.update(Profiling._ram2())
@@ -184,9 +177,8 @@ class AdminViews:
 
         return render(
             request,
-            "adm/index.html",
+            "adm/server_profiling.html",
             {
-                "main_content": main_content,
                 "profiling": statistics,
                 "active": 'server_profiling',
             }
@@ -194,52 +186,40 @@ class AdminViews:
 
     @login_required(login_url="/login/")
     def album(request):
-        main_content = "adm/album.html"
-
         return render(
             request,
-            "adm/index.html",
+            "adm/album.html",
             {
-                "main_content": main_content,
                 "active": 'album',
             }
         )
 
     @login_required(login_url="/login/")
     def music(request):
-        main_content = "adm/music.html"
-
         return render(
             request,
-            "adm/index.html",
+            "adm/music.html",
             {
-                "main_content": main_content,
                 "active": 'music',
             }
         )
 
     @login_required(login_url="/login/")
     def profile(request):
-        main_content = "adm/profile.html"
-
         return render(
             request,
-            "adm/index.html",
+            "adm/profile.html",
             {
-                "main_content": main_content,
                 "active": 'profile',
             }
         )
 
     @login_required(login_url="/login/")
     def settings(request):
-        main_content = "adm/settings.html"
-
         return render(
             request,
-            "adm/index.html",
+            "adm/settings.html",
             {
-                "main_content": main_content,
                 "active": 'settings',
             }
         )
