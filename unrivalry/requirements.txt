@@ -10,5 +10,16 @@ dj-database-url
 python-decouple
 gunicorn
 whitenoise
+# Monitoring
 psutil
 pillow
+# Data Science
+requests
+bs4
+opencv-python
+matplotlib
+tensorflow
+numpy==1.18.5
+# Data Processing and modeling
+pandas
+keras
