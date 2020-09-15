@@ -187,5 +187,5 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 CRONJOBS = [
-    ('* * * * *', 'unrivalryCron.views.index')
+    ('* * * * *', 'unrivalryCron.views.CronViews.index')
 ]
