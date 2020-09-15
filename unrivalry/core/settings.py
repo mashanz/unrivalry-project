@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_crontab',
     'app',  # Enable the inner app
+    'django_crontab',
+    'background_task',
+    'django_extensions',
     'unrivalryWeb',
     'unrivalryAdmin',
     'unrivalryApi',
@@ -186,6 +188,8 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+CRONTAB_COMMAND_SUFFIX = '2>&1'
+
 CRONJOBS = [
-    ('* * * * *', 'unrivalryCron.views.CronViews.index')
+    ('* * * * *', 'unrivalryCron.views.index')
 ]
