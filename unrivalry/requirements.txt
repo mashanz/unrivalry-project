@@ -1,25 +1,25 @@
-asgiref
-autopep8
+asgiref==3.2.10
+autopep8==1.5.4
 django==2.1.10
-django-allauth
-pycodestyle
-pytz
-sqlparse
-Unipath
-dj-database-url
-python-decouple
-gunicorn
-whitenoise
+django-allauth==0.42.0
+pycodestyle==2.6.0
+pytz==2020.1
+sqlparse== 0.3.1
+Unipath== 1.1
+dj-database-url==0.5.0
+python-decouple== 3.3
+gunicorn== 20.0.4
+whitenoise== 5.2.0
 # Monitoring
-psutil
-pillow
+psutil== 5.7.2
+pillow==  7.2.0
 # Data Science
-requests
-bs4
-opencv-python
-matplotlib
-tensorflow
+requests==2.24.0
+bs4==0.0.1
+opencv-python==4.4.0.42
+matplotlib==3.3.1
+tensorflow==2.3.0
 numpy==1.18.5
 # Data Processing and modeling
-pandas
-keras
+pandas==1.1.2
+keras==2.4.3
