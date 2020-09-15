@@ -44,10 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django_crontab',
     'app',  # Enable the inner app
     'unrivalryWeb',
     'unrivalryAdmin',
     'unrivalryApi',
+    'unrivalryCron',
     'portfolio',
     'socialLogin',
     'allauth',
@@ -183,3 +185,7 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+CRONJOBS = [
+    ('* * * * *', 'unrivalryCron.views.index')
+]
