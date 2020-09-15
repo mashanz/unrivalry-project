@@ -1,0 +1,14 @@
+asgiref
+autopep8
+django==2.1.10
+django-allauth
+pycodestyle
+pytz
+sqlparse
+Unipath
+dj-database-url
+python-decouple
+gunicorn
+whitenoise
+psutil
+pillow
