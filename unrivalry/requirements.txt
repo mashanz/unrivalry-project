@@ -14,7 +14,7 @@ whitenoise== 5.2.0
 psutil== 5.7.2
 pillow==  7.2.0
 # Data Science
-numpy==1.18.5
+numpy==1.19.2
 requests==2.24.0
 beautifulsoup4==4.9.1
 opencv-python==4.4.0.42
