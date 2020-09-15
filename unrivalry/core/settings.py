@@ -191,6 +191,5 @@ SOCIALACCOUNT_PROVIDERS = {
 CRONTAB_COMMAND_SUFFIX = '2>&1'
 
 CRONJOBS = [
-    ('* * * * *', 'unrivalryCron.views.index',
-     f'>> {BASE_DIR}/unrivalryCron/cron.log')
+    ('* * * * *', 'unrivalryCron.views.index')
 ]
