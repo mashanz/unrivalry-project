@@ -8,8 +8,8 @@ from app import views
 
 urlpatterns = [
     # The home page
-    path('templates', views.index, name='home'),
+    path('', views.index),
 
     # Matches any html file
-    re_path(r'^.*\.*', views.pages, name='pages'),
+    re_path(r'^.*\.*', views.pages),
 ]

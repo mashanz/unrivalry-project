@@ -21,12 +21,14 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     # Core App URL
     path('users/', include('django.contrib.auth.urls')),
     path('soclog/', TemplateView.as_view(template_name="soclog/index.html")),
-    path('devadmin', admin.site.urls),            # Django admin route
-    path('devadmin/', admin.site.urls),           # Django admin route
+    path('devadmin', admin.site.urls),          # Django admin route
+    path('devadmin/', admin.site.urls),         # Django admin route
     path('accounts/', include('allauth.urls')),
-    path("", include("authentication.urls")),  # Auth routes - login / register
+    # Auth routes - login / register
+    path("", include("authentication.urls")),
 
     # Everything Else under this is unknown or 404
+    path("templates", include("app.urls")),     # UI Kits Html files
+    path("templates/", include("app.urls")),    # UI Kits Html files
     path("", include("unrivalryWeb.urls")),
-    # path("", include("app.urls")),             # UI Kits Html files
 ]
