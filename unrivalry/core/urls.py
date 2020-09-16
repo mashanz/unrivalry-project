@@ -17,6 +17,8 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     path("api/", include("unrivalryApi.urls")),
     path("portfolio", include("portfolio.urls")),
     path("portfolio/", include("portfolio.urls")),
+    path("ds", include("unrivalryDataScience.urls")),
+    path("ds/", include("unrivalryDataScience.urls")),
 
     # Core App URL
     path('users/', include('django.contrib.auth.urls')),
