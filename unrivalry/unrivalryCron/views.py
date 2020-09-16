@@ -16,7 +16,7 @@ def index():
     with open(filename, 'a') as f:
         print("[CRONTAB] It is a cron", file=f)
         x = requests.get(
-            'http://localhost:8000/api/social_user')
+            'https://unrivalry.com/api/social_user')
         print(x.text, file=f)
 
 
@@ -25,7 +25,7 @@ class CronViews():
     def index():
         print("[CRONTAB] It is a cron")
         x = requests.get(
-            'http://localhost:8000/api/social_user')
+            'https://unrivalry.com/api/social_user')
         print(x.text)
 
     # @background(schedule=10)
