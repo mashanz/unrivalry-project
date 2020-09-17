@@ -13,12 +13,6 @@ APPEND_SLASH = True
 
 SECURE_SSL_REDIRECT = False
 
-# Force SSL if published
-if str(socket.gethostname()) == 'localhost.local':
-    SECURE_SSL_REDIRECT = False
-else:
-    SECURE_SSL_REDIRECT = True
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = Path(__file__).parent
@@ -28,11 +22,10 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False)
-# DEBUG = True
 
 # load production server from .env
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',
-                 config('SERVER', default='127.0.0.1'), 'unrivalry.com']
+                 config('SERVER', default='127.0.0.1')]
 
 # Application definition
 

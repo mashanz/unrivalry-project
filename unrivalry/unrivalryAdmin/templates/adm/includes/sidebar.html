@@ -25,14 +25,16 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+        {% if perms.unrivalryAdmin.dashboard %}
         <li class="nav-item">
           <a href="{% if active != "dashboard" %}/dashboard{% else %}#{% endif %}" class="nav-link {% if active == "dashboard" %}active{% endif %}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
         </li>
+        {% endif %}
 
-        {% if user.is_superuser %}
+        {% if perms.unrivalryAdmin.server_profiling %}
         <li class="nav-item">
           <a href="{% if active != "server_profiling" %}/dashboard/server_profiling{% else %}#{% endif %}" class="nav-link {% if active == "server_profiling" %}active{% endif %}">
             <i class="nav-icon fas fa-th"></i>
@@ -41,28 +43,34 @@
         </li>
         {% endif %}
         
+        {% if perms.unrivalryAdmin.album %}
         <li class="nav-item">
           <a href="{% if active != "album" %}/dashboard/album{% else %}#{% endif %}" class="nav-link {% if active == "album" %}active{% endif %}">
             <i class="nav-icon fas fa-compact-disc"></i>
             <p>Album</p>
           </a>
         </li>
+        {% endif %}
         
+        {% if perms.unrivalryAdmin.music %}
         <li class="nav-item">
           <a href="{% if active != "music" %}/dashboard/music{% else %}#{% endif %}" class="nav-link {% if active == "music" %}active{% endif %}">
             <i class="nav-icon fas fa-music"></i>
               <p>Music</p>
           </a>
         </li>
+        {% endif %}
         
         <li class="nav-header">MISCELLANEOUS</li>
  
+        {% if perms.unrivalryAdmin.settings %}
         <li class="nav-item">
           <a href="{% if active != "settings" %}/dashboard/settings{% else %}#{% endif %}" class="nav-link {% if active == "settings" %}active{% endif %}">
             <i class="nav-icon fas fa-sliders-h"></i>
             <p>Settings</p>
           </a>
         </li>
+        {% endif %}
           
         </ul>
       </nav>
