@@ -25,7 +25,7 @@ pillow==  7.2.0
 # Data Science
 numpy==1.18.5
 requests==2.24.0
-beautifulsoup4==4.9.1
+beautifulsoup4==4.9.2
 scikit-learn==0.23.2
 seaborn==0.11.0
 # matplotlib==3.3.1
