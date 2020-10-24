@@ -17,7 +17,7 @@ django-extensions==3.0.8
 jupyter 
 ipython 
 # Monitoring
-psutil== 5.7.2
+psutil== 5.7.3
 pillow==  7.2.0
 # Data Processing and modeling
 # pandas==1.1.2
