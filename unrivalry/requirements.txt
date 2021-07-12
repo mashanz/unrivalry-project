@@ -4,7 +4,7 @@ django==2.1.10
 django-allauth==0.45.0
 django-crontab
 pycodestyle==2.6.0
-pytz==2020.1
+pytz==2021.1
 sqlparse==0.3.1
 Unipath==1.1
 dj-database-url==0.5.0
