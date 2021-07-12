@@ -1,5 +1,5 @@
 asgiref==3.4.1
-autopep8==1.5.4
+autopep8==1.5.7
 django==3.2.5
 django-allauth==0.45.0
 django-crontab
