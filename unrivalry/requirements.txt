@@ -24,7 +24,7 @@ pillow== 8.1.1
 # keras==2.4.3
 # Data Science
 numpy==1.19.5
-requests==2.24.0
+requests==2.25.1
 beautifulsoup4==4.9.3
 scikit-learn==0.23.2
 seaborn==0.11.1
