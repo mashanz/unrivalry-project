@@ -18,7 +18,7 @@ jupyter
 ipython 
 # Monitoring
 psutil== 5.8.0
-pillow==  7.2.0
+pillow== 8.1.1
 # Data Processing and modeling
 # pandas==1.1.2
 # keras==2.4.3
